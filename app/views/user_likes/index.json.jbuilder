@@ -1,0 +1,1 @@
+json.array! @user_likes, partial: 'user_like', as: :user_like
