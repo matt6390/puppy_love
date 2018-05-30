@@ -10,9 +10,10 @@ Rails.application.routes.draw do
   patch '/users/:id' => 'users#update'
   delete '/users/:id' => 'users#destroy'
 
+  #Likes
   get '/likes' => 'likes#index'
-  get '/likes/:id' => 'likes#show'
+  # get '/likes/:id' => 'likes#show'
   post '/likes' => 'likes#create'
-  patch '/likes/:id' => 'likes#update'
+  # patch '/likes/:id' => 'likes#update'
   delete '/likes/:id' => 'likes#destroy'
 end

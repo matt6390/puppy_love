@@ -1,5 +1,10 @@
 class LikesController < ApplicationController
+  def index
+    @likes = Like.all 
 
+    render 'index.json.jbuilder'
+  end
+  
   def create
     @like = Like.new(
                       profile_id: params[:profile_id]
@@ -11,7 +16,4 @@ class LikesController < ApplicationController
       render json: {errors: @like.errors.full_messages}, status: :unprocessable_entity
     end
   end
-
-
-
 end
