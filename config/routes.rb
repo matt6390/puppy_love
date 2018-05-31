@@ -1,5 +1,6 @@
 Rails.application.routes.draw do
 
+  devise_for :users
   #User Authentication
   post 'user_token' => 'user_token#create'
 
@@ -16,4 +17,24 @@ Rails.application.routes.draw do
   post '/likes' => 'likes#create'
   # patch '/likes/:id' => 'likes#update'
   delete '/likes/:id' => 'likes#destroy'
+
+  #Messages
+  get '/messages' => 'messages#index'
+  post '/messages' => 'messages#create'
+  delete '/messages/:id' => 'messages#destroy'
+
+  #Conversations
+  get '/conversations' => 'conversations#index'
+  # get '/conversations/:id' => 'conversations#show'
+  post '/conversations' => 'conversations#create'
+  delete '/conversations/:id' => 'conversations#destroy'
 end
+
+
+
+
+
+
+
+
+
