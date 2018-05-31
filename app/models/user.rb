@@ -7,4 +7,7 @@ class User < ApplicationRecord
 
   has_many :user_likes
   has_many :likes, through: :user_likes
+
+  has_many :messages
+  has_many :conversations
 end
